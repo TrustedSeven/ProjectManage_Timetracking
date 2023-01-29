@@ -11,6 +11,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get ('/', (req, res) => {
+    res.json({message: 'Welcome to dashboard'});
+    });
+
 app.get('/details', (req, res) => {
     res.send({data: 'Hello World, from express'});
 });
